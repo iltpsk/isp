@@ -38,7 +38,6 @@ class TvShowsFragment : Fragment(R.layout.tv_shows_fragment) {
         val tvShowsList = MockRepository
             .getMovies()
             .map { TvShowItem(it) }
-            .toList()
 
         binding.tvShowsRecyclerView.adapter = adapter.apply { addAll(tvShowsList) }
     }
