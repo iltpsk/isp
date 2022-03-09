@@ -6,16 +6,17 @@ import com.xwray.groupie.viewbinding.BindableItem
 import ru.androidschool.intensiv.R
 import ru.androidschool.intensiv.data.Movie
 import ru.androidschool.intensiv.databinding.ItemTvShowBinding
+import ru.androidschool.intensiv.ui.extensions.loadImage
 
 class TvShowItem(private val content: Movie) : BindableItem<ItemTvShowBinding>() {
     override fun bind(view: ItemTvShowBinding, position: Int) {
-        view.description.text = content.title
-        view.movieRating.rating = content.rating
+        with(view) {
+            description.text = content.title
+            movieRating.rating = content.rating
 
-        // TODO Получать из модели
-        Picasso.get()
-            .load("https://m.media-amazon.com/images/M/MV5BYTk3MDljOWQtNGI2My00OTEzLTlhYjQtOTQ4ODM2MzUwY2IwXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_.jpg")
-            .into(view.imagePreview)
+            // TODO Получать из модели
+            imagePreview.loadImage("https://m.media-amazon.com/images/M/MV5BYTk3MDljOWQtNGI2My00OTEzLTlhYjQtOTQ4ODM2MzUwY2IwXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_.jpg")
+        }
     }
 
     override fun getLayout(): Int = R.layout.item_tv_show
