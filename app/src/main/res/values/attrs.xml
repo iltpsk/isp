@@ -4,4 +4,8 @@
         <attr name="hint" format="string" />
         <attr name="cancel_visible" format="boolean" />
     </declare-styleable>
+
+    <declare-styleable name="RoundedImageView">
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
 </resources>
