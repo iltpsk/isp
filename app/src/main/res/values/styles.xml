@@ -25,4 +25,27 @@
         <item name="cornerSize">4%</item>
     </style>
 
+    <style name="MovieDetails"/>
+
+    <style name="MovieDetails.TitleTextStyle">
+        <item name="android:textColor">@color/textColorLight</item>
+        <item name="android:textSize">@dimen/dimens_26sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginStart">@dimen/dimens_24</item>
+        <item name="android:layout_marginTop">@dimen/dimens_10</item>
+        <item name="android:layout_marginEnd">@dimen/dimens_8</item>
+    </style>
+
+    <style name="MovieDetails.NormalText">
+        <item name="android:textColor">@color/textColorGrey</item>
+        <item name="android:textSize">@dimen/dimens_12sp</item>
+    </style>
+
+    <style name="MovieDetails.BoldText">
+        <item name="android:textColor">@color/textColorLight</item>
+        <item name="android:textSize">@dimen/dimens_12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
 </resources>
